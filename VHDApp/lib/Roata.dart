@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import "./tipRoata.dart";
 
 class Roata {
+  double serialNumber;
   static int index;
   int iD;
   DateTime dataIntrare;
