@@ -3,37 +3,55 @@
   "packages": [
     {
       "name": "archive",
-      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/archive-2.0.11",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/archive-2.0.13",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
     {
       "name": "args",
-      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/args-1.5.2",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/args-1.6.0",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.3"
     },
     {
       "name": "async",
-      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/async-2.4.0",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/async-2.4.1",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.2"
     },
     {
       "name": "boolean_selector",
-      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/boolean_selector-1.0.5",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/boolean_selector-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.4"
+    },
+    {
+      "name": "charcode",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/charcode-1.1.3",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
     {
-      "name": "charcode",
-      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/charcode-1.1.2",
+      "name": "cloud_firestore",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/cloud_firestore-0.13.4+2",
       "packageUri": "lib/",
-      "languageVersion": "1.0"
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "cloud_firestore_platform_interface",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/cloud_firestore_platform_interface-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "cloud_firestore_web",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/cloud_firestore_web-0.1.1+2",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
     },
     {
       "name": "collection",
-      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/collection-1.14.11",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/collection-1.14.12",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -45,13 +63,37 @@
     },
     {
       "name": "crypto",
-      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/crypto-2.1.3",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/crypto-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.1"
     },
     {
       "name": "cupertino_icons",
       "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/cupertino_icons-0.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "firebase",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/firebase-7.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    },
+    {
+      "name": "firebase_core",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/firebase_core-0.4.4+3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "firebase_core_platform_interface",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/firebase_core_platform_interface-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "firebase_core_web",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/firebase_core_web-0.1.1+2",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -68,8 +110,26 @@
       "languageVersion": "2.2"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///C:/src/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "http",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/http-0.12.0+4",
+      "packageUri": "lib/",
+      "languageVersion": "2.4"
+    },
+    {
+      "name": "http_parser",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/http_parser-3.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.3"
+    },
+    {
       "name": "image",
-      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/image-2.1.4",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/image-2.1.12",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -78,6 +138,12 @@
       "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/intl-0.16.0",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "js",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/js-0.6.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "1.19"
     },
     {
       "name": "matcher",
@@ -99,7 +165,7 @@
     },
     {
       "name": "pedantic",
-      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/pedantic-1.8.0+1",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/pedantic-1.9.0",
       "packageUri": "lib/",
       "languageVersion": "2.1"
     },
@@ -110,8 +176,14 @@
       "languageVersion": "2.4"
     },
     {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/plugin_platform_interface-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "quiver",
-      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/quiver-2.0.5",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/quiver-2.1.3",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -123,9 +195,9 @@
     },
     {
       "name": "source_span",
-      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/source_span-1.5.5",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/source_span-1.7.0",
       "packageUri": "lib/",
-      "languageVersion": "1.8"
+      "languageVersion": "2.6"
     },
     {
       "name": "stack_trace",
@@ -153,9 +225,9 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/test_api-0.2.11",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/test_api-0.2.15",
       "packageUri": "lib/",
-      "languageVersion": "2.2"
+      "languageVersion": "2.4"
     },
     {
       "name": "typed_data",
@@ -177,9 +249,9 @@
     },
     {
       "name": "xml",
-      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/xml-3.5.0",
+      "rootUri": "file:///C:/Users/H232112/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/xml-3.6.1",
       "packageUri": "lib/",
-      "languageVersion": "2.3"
+      "languageVersion": "2.6"
     },
     {
       "name": "VHD",
@@ -188,7 +260,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-01-27T20:25:26.941732Z",
+  "generated": "2020-04-06T15:53:16.809270Z",
   "generator": "pub",
-  "generatorVersion": "2.8.0-dev.5.0.flutter-fc3af737c7"
+  "generatorVersion": "2.8.0-dev.20.0.flutter-05103dfe5a"
 }

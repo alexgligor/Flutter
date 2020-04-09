@@ -2,11 +2,23 @@ import 'package:flutter/material.dart';
 
 import "package:VHD/Roata.dart";
 import 'package:VHD/tipRoata.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class ManagerRoti {
   List<Roata> _listaRoti;
   static ManagerRoti _instance;
   Roata _roataClone;
+  Roata _roataCurenta;
+
+  void setRoataCurenta(Roata roata)
+  {
+    _roataCurenta = roata;
+  }
+
+  Roata get getRoataCurenta
+  {
+    return _roataCurenta;
+  }
 
   void setRoataClone(Roata roata)
   {
@@ -18,65 +30,20 @@ class ManagerRoti {
     _generateDummyData();
   }
 
-  _generateDummyData() {
-    for (int i = 0; i < 1; i++) {
-      _listaRoti.add(Roata(
-          pretCumparare: 145,
-          pretVanzare: 180,
-          latime: 255,
-          balonaj: 55,
-          r: 15,
-          marca: "Continental",
-          tip: TipRoata.Vara));
-      _listaRoti.add(Roata(
-          pretCumparare: 10,
-          pretVanzare: 150,
-          latime: 255,
-          balonaj: 55,
-          r: 16,
-          marca: "Ducce",
-          tip: TipRoata.Vara));
-      _listaRoti.add(Roata(
-          pretCumparare: 10,
-          pretVanzare: 150,
-          latime: 255,
-          balonaj: 55,
-          r: 17,
-          marca: "F11",
-          tip: TipRoata.Vara));
-      _listaRoti.add(Roata(
-          pretCumparare: 10,
-          pretVanzare: 150,
-          latime: 255,
-          balonaj: 55,
-          r: 19,
-          marca: "Savoe",
-          tip: TipRoata.Iarna));
-      _listaRoti.add(Roata(
-          pretCumparare: 10,
-          pretVanzare: 150,
-          latime: 255,
-          balonaj: 55,
-          r: 22,
-          marca: "Rotti",
-          tip: TipRoata.Vara));
-      _listaRoti.add(Roata(
-          pretCumparare: 10,
-          pretVanzare: 150,
-          latime: 255,
-          balonaj: 55,
-          r: 14,
-          marca: "Continental",
-          tip: TipRoata.AllSeasons));
-      _listaRoti.add(Roata(
-          pretCumparare: 10,
-          pretVanzare: 150,
-          latime: 255,
-          balonaj: 55,
-          r: 13,
-          marca: "Debica",
-          tip: TipRoata.Vara));
-    }
+  _generateDummyData() async {
+    Firestore _firestore = Firestore.instance;
+    QuerySnapshot allDocuments = await _firestore.collection('roti').getDocuments();
+    allDocuments.documents.forEach((element) {
+      print("elements");
+       _listaRoti.add(Roata(
+              //  pretCumparare: element['pretCumparare'],
+                pretVanzare: 0,
+                latime:  element['latime'],
+                balonaj: element['balonaj'],
+                r: element['r'],
+                marca: element['marca'],
+                tip: TipRoata.Vara));
+     });
   }
 
   static ManagerRoti getManagerRoti() {
@@ -84,18 +51,53 @@ class ManagerRoti {
     return _instance;
   }
 
- List<Widget> filterByFirma(String firma){
-   return _listaRoti.where((r)=>r.marca==firma).map((r){return r.widget;}).toList();
+ List<Widget> filterByFirma(String firma, BuildContext context){
+   return _listaRoti.where((r)=>r.marca==firma).map((r){return r.widget(context);}).toList();
   }
 
-  List<Widget> widgetRotiList() {
+  List<Widget> widgetRotiList(BuildContext context) {
     return _listaRoti.map((roata) {
-      return roata.widget;
+      return roata.widget(context);
     }).toList();
   }
 
   void addRoata(Roata roata)
   {
     _listaRoti.add(roata);
+    Firestore.instance.collection('roti').document().setData({
+      'iD':roata.iD.toString(),
+      'marca':roata.marca,
+      'tip':roata.tip.toString(),
+      'latime':roata.latime,
+      'balonaj':roata.balonaj,
+      'r':roata.r,
+      'pretCumparare':roata.pretCumparare.toString(),
+      'pretVanzare':roata.pretVanzare.toString(),
+      'dataIntrare':roata.dataIntrare.toString(),
+      'disponibil':true
+      });
+
+
+  }
+
+  void cautaDupaTip()
+  {
+    _listaRoti = new List();
+    Firestore.instance
+    .collection('roti')
+    .where("marca", isEqualTo: "debica")
+    .snapshots()
+    .listen((data) =>
+        data.documents.forEach((element) => {
+              _listaRoti.add(Roata(
+              //  pretCumparare: element['pretCumparare'],
+                pretVanzare: 0,
+                latime:  element['latime'],
+                balonaj: element['balonaj'],
+                r: element['r'],
+                marca: element['marca'],
+                tip: TipRoata.Vara))
+     }));  
+
   }
 }

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:VHD/ManagerRoti.dart';
 import 'package:VHD/AdaugareRoata.dart';
+import 'package:VHD/AfisareRoata.dart';
+import 'package:VHD/CautareRoata.dart';
+import 'package:VHD/ManagerAplicatie.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -8,7 +11,9 @@ void main() {
     initialRoute: "/",
     routes: <String, WidgetBuilder>{
       "/": (BuildContext context) => new MyApp(),
-      "/AdaugareRoataPage": (BuildContext context) => new AdaugareRoataPage()
+      "/" + Pagini.AdaugareRoata.toString() : (BuildContext context) => new AdaugareRoataPage(),
+      "/" + Pagini.AfisareRoata.toString() : (BuildContext context) => new AfisareRoataPage(),
+      "/" + Pagini.CautareRoata.toString() : (BuildContext context) => new CautareRoataPage()
     },
   ));
 }
@@ -33,14 +38,15 @@ class ListareRotiMyAppState extends State<MyApp> {
         body: ListView(
           padding: EdgeInsets.all(2),
           children: ManagerRoti.getManagerRoti()
-              .widgetRotiList(), //<Widget>[ TextField(decoration: InputDecoration(labelText: 'Test'))],
+              .widgetRotiList(context), //<Widget>[ TextField(decoration: InputDecoration(labelText: 'Test'))],
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.pink,
           child: Icon(Icons.add),
           onPressed: () {
-            Navigator.of(context).pushNamed("/AdaugareRoataPage");
+           // Navigator.of(context).pushNamed("/" + Pagini.AdaugareRoata.toString());
+           Navigator.of(context).pushNamed("/" + Pagini.CautareRoata.toString());
           },
         ),
       ),

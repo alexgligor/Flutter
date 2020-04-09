@@ -1,10 +1,12 @@
+import 'package:VHD/ManagerRoti.dart';
+import 'package:VHD/ManagerAplicatie.dart';
 import "package:flutter/material.dart";
 import 'package:intl/intl.dart';
 
 import "./tipRoata.dart";
 
 class Roata {
-  double serialNumber;
+  int serialNumber;
   static int index;
   int iD;
   DateTime dataIntrare;
@@ -32,34 +34,41 @@ class Roata {
     if (this.disponibil == null) this.disponibil = true;
    this.iD = index;
   // index+=1;
+     serialNumber = DateTime.now().microsecondsSinceEpoch;
   }
 
-  Widget get widget {
-    return Card(
-        child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-       ListTile(
-            leading: Icon(Icons.album, size: 40),
-           title: Text('$marca $pretVanzare RONXX'),
-           subtitle: Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
-             Padding(
-                padding: EdgeInsets.all(4.0),
-                child: Text('$latime/$balonaj R$r'),
-              ),
-              Padding(
-                padding: EdgeInsets.all(4.0),
-                child: Text(
-                  tip.toString().split('.')[1],
-                  style: TextStyle(color: Colors.black),
+  Widget widget(BuildContext context) {
+    return GestureDetector(
+          onTap: (){
+            ManagerRoti.getManagerRoti().setRoataCurenta(this);
+            Navigator.of(context).pushNamed("/" + Pagini.AfisareRoata.toString());
+          },
+          child: Card(
+          child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+         ListTile(
+              leading: Icon(Icons.album, size: 40),
+             title: Text('$marca $pretVanzare RON  $serialNumber' ),
+             subtitle: Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
+               Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text('$latime/$balonaj R$r'),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(4.0),
-                child: Text(DateFormat.yMMMd().format(dataIntrare).toString()),
-              )
-            ])),
-      ],
-    ));
+                Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(
+                    tip.toString().split('.')[1],
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(DateFormat.yMMMd().format(dataIntrare).toString()),
+                )
+              ])),
+        ],
+      )),
+    );
   }
 }
